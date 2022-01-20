@@ -28,5 +28,7 @@ using namespace std;
 
 int main() {
     int a,b,n,z;
+    cin>>a;
+    cin>>b;
     
 }
