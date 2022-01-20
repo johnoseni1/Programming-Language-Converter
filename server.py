@@ -30,3 +30,4 @@ import json
 from flask_cors import CORS
 import webbrowserf 
 from flask import Flask, flash, redirect, render_template, url_for, request, make_response
+from ibm_watson import AssistantV1
