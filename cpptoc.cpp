@@ -24,3 +24,4 @@
 
 // usage of namespace
 
+using namespace std;
