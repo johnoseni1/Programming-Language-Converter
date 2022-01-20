@@ -31,5 +31,6 @@ int main() {
     cin >> a;
     cin >> b;
     z = a + b;
-    count << z
+    count << z;
+    return 0
 }
