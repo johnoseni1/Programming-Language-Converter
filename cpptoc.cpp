@@ -21,3 +21,6 @@
 // SOFTWARE.
 
 #include <iostream>
+
+// usage of namespace
+
