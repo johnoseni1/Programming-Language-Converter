@@ -32,5 +32,5 @@ int main() {
     cin >> b;
     z = a + b;
     count << z;
-    return 0
+    return 0;
 }
