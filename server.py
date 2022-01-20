@@ -27,3 +27,4 @@ import json,requests
 import webbrowser
 import re
 import json
+from flask_cors import CORS
