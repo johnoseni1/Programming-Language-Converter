@@ -27,5 +27,6 @@
 using namespace std;
 
 int main() {
-    int a,b,n,z
+    int a,b,n,z;
+    
 }
