@@ -25,3 +25,6 @@
 // usage of namespace
 
 using namespace std;
+
+int main() 
+
