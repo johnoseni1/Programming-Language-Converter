@@ -56,5 +56,5 @@ function passMessage() {
 // function to display the message
 
 function showMessage (response) {
-    console.log()
+    console.log('Message passed to the frontend')
 }
