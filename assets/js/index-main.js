@@ -23,4 +23,4 @@
 // SOFTWARE.
 
 const recordingProgress = document.querySelector('.recordingProgress');
-const mic 
+const microPhone = document.querySelector('.microPhone');
