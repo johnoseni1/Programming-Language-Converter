@@ -20,4 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import numbers
 import re
+
+def convert(py): 
+    numbers=['1','2','3','4','5','6','7','8','9','0']
+    
+    
