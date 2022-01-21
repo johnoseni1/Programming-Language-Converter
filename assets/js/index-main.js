@@ -59,6 +59,13 @@ function showMessage (response) {
     console.log('Message passed to the frontend'); 
     // Response answer
     response_answer = document.getElementById("messageResponse") // the word in the tag should be the text as the id in the html frontend tag
-    var compare = response.toString().localeCompare('C++ folder')
-    
+    var compare = response.toString().localeCompare('C plus plus folder')
+    if (compare == 0 ) {rl
+        response = 'C plus plus folder'
+    } 
+    // To display the response parsed by the codes to the user
+    element_value = `
+    User: ${response}
+    `
+
 }
