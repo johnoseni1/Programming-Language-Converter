@@ -53,3 +53,8 @@ function passMessage() {
     showMessage(passedMessage);
 }
 
+// function to display the message
+
+function showMessage (response) {
+    console.log()
+}
