@@ -38,3 +38,18 @@ if (typeof(String.prototype.localeCompare) === "undefined") {
 
 var logus = 1;
 let recordingNow = false;
+microPhone.addEventListener('click', listenToSpeech)
+
+// clear the input
+
+function clearInput () {
+    chatInput.value = ''
+}
+
+// Pass a message accross
+
+function passMessage() {
+    let passedMessage = chatInput.value
+    showMessage(passedMessage);
+}
+
