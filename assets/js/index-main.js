@@ -33,3 +33,4 @@ if (typeof(String.prototype.localeCompare) === "undefined") {
 }
 
 var logus = 1;
+let recordingNow = false;
