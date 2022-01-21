@@ -26,11 +26,15 @@ const recordingProgress = document.querySelector('.recordingProgress');
 const microPhone = document.querySelector('.microPhone');
 const diamond = window.speechSynthesis.getVoices().filter(voice => voice.name === 'Diamond')[0]
 
+// Checking the If statement here
+
 if (typeof(String.prototype.localeCompare) === "undefined") {
     String.prototype.localeCompare = function(str, locale, options) {
         return((this === str) ? 0 : ((this> str) ? 1 : -1));
     };
 }
+
+// Adding eventlistener here
 
 var logus = 1;
 let recordingNow = false;
