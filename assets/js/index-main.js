@@ -56,5 +56,8 @@ function passMessage() {
 // function to display the message
 
 function showMessage (response) {
-    console.log('Message passed to the frontend')
+    console.log('Message passed to the frontend'); 
+    // Response answer
+    response_answer = document.getElementById("messageResponse") // the word in the tag should be the text as the id in the html frontend tag
+    
 }
