@@ -27,10 +27,6 @@ $(window).on('load', function () {
 	$(".loader").fadeOut();
 	$("#preloder").delay(900).fadeOut("slow");
 
-
-	/*------------------
-		Product filter
-	--------------------*/
 	if ($('#product-filter').length > 0) {
 		var containerEl = document.querySelector('#product-filter');
 		var mixer = mixitup(containerEl);
