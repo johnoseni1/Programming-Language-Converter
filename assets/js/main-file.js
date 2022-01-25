@@ -35,9 +35,7 @@ $(window).on('load', function () {
 });
 
 (function ($) {
-	/*------------------
-		Navigation
-	--------------------*/
+
 	$('.nav-switch').on('click', function (event) {
 		$('.main-menu').slideToggle(400);
 		event.preventDefault();
