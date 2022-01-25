@@ -68,5 +68,7 @@ function showMessage (response) {
     User: ${response}
     `
     response_answer.innerHTML = element_value;
+
+    var res_in_json
     
 }
