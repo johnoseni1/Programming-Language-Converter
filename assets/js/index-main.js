@@ -180,4 +180,9 @@ function outputResponseC (response) {
     });
   }
 
-  
+  function sayResponse (response) {
+    let utterance = new SpeechSynthesisUtterance(response);
+    utterance.voice = samantha
+    window.speechSynthesis.speak(utterance)
+    displayResponse(response)
+  }
