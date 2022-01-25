@@ -122,7 +122,7 @@ function showMessage (response) {
            displayResponseC(response.response);
           }
           else if(flag==2){
-           displayResponsePhp(response.response);
+            outputResponsePhp(response.response);
           }
           else if(flag==3){
             displayResponseSwift(response.response);
@@ -142,3 +142,15 @@ function outputResponse (response) {
         theme: 'Beyond'
     });
 }
+
+function outputResponsePhp (response) {
+    let newChat = document.createElement('p')
+    newChat.innerHTML = `${response}`
+      chatMessages = document.getElementById("chat-input");
+      chatMessages.append(newChat)
+      EnlighterJS.Util.Init('p', null, {
+        indent: 4,
+        language: 'php',
+        theme: 'Beyond'
+    });
+  }
