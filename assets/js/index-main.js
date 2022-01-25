@@ -69,6 +69,65 @@ function showMessage (response) {
     `
     response_answer.innerHTML = element_value;
 
-    var res_in_json
+    var res_in_json = {"text": response}
+    $.ajax({
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        url: "http://127.0.0.1:5000/print/name", //localhostURL
+        traditional: "true",
+        data: JSON.stringify(res_in_json),
+        dataType: "json",
+        success:function(response){
+          //speakResponse(response.response);
+          var p=response.response.toString().localeCompare("python running!")
+          var c=response.response.toString().localeCompare("running c++")
+          var ph=response.response.toString().localeCompare("running php")
+          var sw=response.response.toString().localeCompare("running swift")
+          if(p==0){
+            flag=1
+            console.log(flag)
+          }
+          else if(p==-1 || p==1){
+            flag=flag
+            console.log(flag)
+          }
+          if(c==0){
+            flag=0
+            console.log(flag)
+          }
+          else if(c==-1 || c==1) {
+            flag=flag
+            console.log(flag)
+          }
+          if(ph==0){
+            flag=2
+            console.log(flag)
+          }
+          else if(ph==-1 || ph==1) {
+            flag=flag
+            console.log(flag)
+          }
+          if(sw==0){
+            flag=3
+            console.log(flag)
+          }
+          else if(sw==-1 || sw==1){
+            flag=flag
+            console.log(flag)
+          }
+          if(flag==1){
+          displayResponse(response.response);
+          }
+          else if(flag==0){
+          displayResponseC(response.response);
+          }
+          else if(flag==2){
+            displayResponsePhp(response.response);
+          }
+          else if(flag==3){
+            displayResponseSwift(response.response);
+           }
+        }
+        });
     
 }
