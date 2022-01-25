@@ -45,7 +45,7 @@ $(window).on('load', function () {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
-    
+
 	$('.hero-slider').owlCarousel({
 		loop: true,
 		nav: true,
@@ -58,10 +58,6 @@ $(window).on('load', function () {
 		autoplay: true
 	});
 
-
-	/*------------------
-		Intro Slider
-	--------------------*/
 	if ($('.intro-slider').length > 0) {
 		var $scrollbar = $('.scrollbar');
 		var $frame = $('.intro-slider');
