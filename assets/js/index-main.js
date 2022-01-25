@@ -234,4 +234,10 @@ function outputResponseC (response) {
           recognition.onerror = function(event) {
               console.log('Error occurred in recognition: ' + event.error);
           }
-  }
+}
+
+document.querySelector('.botButton').addEventListener('click', function (){
+    console.log('clicked')
+    document.querySelector('.botModal').classList.toggle('open')
+  })
+  console.log(flag)
