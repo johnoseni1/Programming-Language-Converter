@@ -119,7 +119,7 @@ function showMessage (response) {
            outputResponse(response.response);
           }
           else if(flag==0){
-           displayResponseC(response.response);
+            outputResponseC(response.response);
           }
           else if(flag==2){
             outputResponsePhp(response.response);
@@ -152,5 +152,17 @@ function outputResponsePhp (response) {
         indent: 4,
         language: 'php',
         theme: 'Beyond'
+    });
+}
+
+function outputResponseC (response) {
+    let newChat = document.createElement('p')
+    newChat.innerHTML = `${response}`
+      chatMessages = document.getElementById("chat-input");
+      chatMessages.append(newChat)
+      EnlighterJS.Util.Init('p', null, {
+        indent: 4,
+        language: 'cpp',
+        theme: 'MooTwo'
     });
   }
