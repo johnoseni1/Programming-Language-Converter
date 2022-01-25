@@ -186,3 +186,52 @@ function outputResponseC (response) {
     window.speechSynthesis.speak(utterance)
     displayResponse(response)
   }
+
+  function speakResponse (response) {
+    let utterance = new SpeechSynthesisUtterance(response);
+    utterance.voice = samantha
+    window.speechSynthesis.speak(utterance)
+    displayResponse(response)
+  }
+  
+  function listenToSpeech () {
+          console.log(isRecording)
+          if (isRecording){
+            isRecording = false
+            recordingStatus.innerText = 'Say your querry :)'
+            return 0;
+          }
+          isRecording = true
+          recordingStatus.innerText = 'Listening..........'
+          var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+          var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+          var recognition = new SpeechRecognition()
+  
+          recognition.lang = 'en-US';
+          recognition.interimResults = false;
+          recognition.maxAlternatives = 1;
+          recognition.start()
+  
+          recognition.onspeechstart = function() {
+              console.log('Speech has been detected');
+          }
+  
+          recognition.onresult = function(event) {
+              let last = event.results.length - 1;
+              let speech = event.results[last][0].transcript;
+       
+              postChatMessage(speech)
+            
+              console.log('Result received: ' + speech + '.');
+              console.log('Confidence: ' + event.results[0][0].confidence);
+          }
+  
+          recognition.onspeechend = function() {
+              recordingStatus.innerText = 'speak your querry :)'
+              console.log('Speech has stopped being detected');
+          }
+  
+          recognition.onerror = function(event) {
+              console.log('Error occurred in recognition: ' + event.error);
+          }
+  }
