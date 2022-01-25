@@ -126,7 +126,7 @@ function showMessage (response) {
           }
           else if(flag==3){
             displayResponseSwift(response.response);
-           }
+          }
         }
         });
     
