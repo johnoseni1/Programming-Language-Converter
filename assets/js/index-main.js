@@ -125,7 +125,7 @@ function showMessage (response) {
             outputResponsePhp(response.response);
           }
           else if(flag==3){
-            displayResponseSwift(response.response);
+            outputResponseSwift(response.response);
           }
         }
         });
@@ -166,3 +166,18 @@ function outputResponseC (response) {
         theme: 'MooTwo'
     });
   }
+
+
+  function outputResponseSwift (response) {
+    let newChat = document.createElement('p')
+    newChat.innerHTML = `${response}`
+      chatMessages = document.getElementById("chat-input");
+      chatMessages.append(newChat)
+      EnlighterJS.Util.Init('p', null, {
+        indent: 4,
+        language: 'swift',
+        theme: 'MooTwo'
+    });
+  }
+
+  
