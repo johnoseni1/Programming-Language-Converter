@@ -116,13 +116,13 @@ function showMessage (response) {
             console.log(flag)
           }
           if(flag==1){
-          displayResponse(response.response);
+           outputResponse(response.response);
           }
           else if(flag==0){
-          displayResponseC(response.response);
+           displayResponseC(response.response);
           }
           else if(flag==2){
-            displayResponsePhp(response.response);
+           displayResponsePhp(response.response);
           }
           else if(flag==3){
             displayResponseSwift(response.response);
@@ -131,3 +131,14 @@ function showMessage (response) {
         });
 }
 
+function outputResponse (response) {
+    let newChat = document.createElement('p')
+    newChat.innerHTML = `${response}`
+      chatMessages = document.getElementById("chat-input");
+      chatMessages.append(newChat)
+      EnlighterJS.Util.Init('p', null, {
+        indent: 4,
+        language: 'python',
+        theme: 'Beyond'
+    });
+}
