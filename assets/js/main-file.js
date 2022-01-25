@@ -83,11 +83,6 @@ $(window).on('load', function () {
 		}).init();
 	}
 
-
-
-	/*------------------
-		ScrollBar
-	--------------------*/
 	$(".cart-table, .product-thumbs").niceScroll({
 		cursorborder: "",
 		cursorcolor: "#afafaf",
