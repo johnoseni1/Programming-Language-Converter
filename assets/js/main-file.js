@@ -89,11 +89,6 @@ $(window).on('load', function () {
 		boxzoom: false
 	});
 
-
-
-	/*------------------
-		Single Product
-	--------------------*/
 	$('.product-thumbs-track > .pt').on('click', function () {
 		var imgurl = $(this).data('imgbigurl');
 		var bigImg = $('.product-big-img').attr('src');
