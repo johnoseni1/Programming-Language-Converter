@@ -3,5 +3,6 @@
         "other": true,
         "comments": true,
         "strings": false
-    }
+    },
+    "liveServer.settings.port": 5501
 }
